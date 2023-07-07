@@ -7,7 +7,6 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.router.HighlightConditions;
 import com.vaadin.flow.router.RouterLink;
 import com.weblog.security.SecurityService;
 
@@ -39,7 +38,6 @@ public class MainLayout extends AppLayout {
   private void createHeader() {
     RouterLink placeHolderView = new RouterLink("Placeholder", PlaceholderView.class);
     RouterLink dashboardView = new RouterLink("Dashboard", DashboardView.class);
-    // placeHolderView.setHighlightCondition(HighlightConditions.sameLocation());
 
     addToDrawer(new VerticalLayout(placeHolderView, dashboardView));
   }
