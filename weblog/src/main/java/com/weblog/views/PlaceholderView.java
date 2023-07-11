@@ -1,23 +1,19 @@
 package com.weblog.views;
 
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.datepicker.DatePicker;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-
+import com.weblog.data.models.Users;
 import jakarta.annotation.security.PermitAll;
 
 @PageTitle("placeholder")
 @Route(value = "", layout = MainLayout.class)
 @PermitAll
-public class PlaceholderView extends VerticalLayout {
+public class PlaceholderView extends Div {
 
   public PlaceholderView() {
-    Button button = new Button("Click Me");
-    HorizontalLayout layout = new HorizontalLayout(button, new DatePicker("Date"));
-    layout.setDefaultVerticalComponentAlignment(Alignment.END);
-    add(layout);
+    Grid<Users> users = new Grid<>(Users.class, false);
+    add(users);
   }
 }

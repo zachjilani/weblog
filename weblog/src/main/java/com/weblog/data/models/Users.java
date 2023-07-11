@@ -1,5 +1,7 @@
 package com.weblog.data.models;
 
+import org.springframework.lang.NonNull;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -12,15 +14,20 @@ public class Users {
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
+  @NonNull
   private Long id;
+
+  @NonNull
   private String firstName;
+
+  @NonNull
   private String lastName;
 
-  public Users(Long id, String firstName, String lastName) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
+  @NonNull
+  private String email;
+
+  private String pictureUrl;
 
   public void setId(Long id) {
     this.id = id;
@@ -40,6 +47,22 @@ public class Users {
 
   public String getLastName() {
     return lastName;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setPictureUrl(String url) {
+    this.pictureUrl = url;
+  }
+
+  public String getPictureUrl() {
+    return pictureUrl;
   }
 
 }
