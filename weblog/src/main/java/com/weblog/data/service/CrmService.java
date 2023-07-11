@@ -31,7 +31,7 @@ public class CrmService {
     usersRepository.delete(user);
   }
 
-  public void saveContact(Users user) {
+  public void saveUser(Users user) {
     if (user == null) {
       System.err.println("User is null. Are you sure you have connected your form to the application?");
       return;
