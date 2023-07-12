@@ -9,60 +9,50 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users", schema = "public")
 public class Users {
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
 
   @NonNull
-  private Long id;
+  private Long user_id;
 
   @NonNull
-  private String firstName;
+  private String firstname;
 
   @NonNull
-  private String lastName;
+  private String lastname;
 
-  @NonNull
-  private String email;
+  // @NonNull
+  // private String email;
 
-  private String pictureUrl;
-
-  public void setId(Long id) {
-    this.id = id;
+  public void setId(Long user_id) {
+    this.user_id = user_id;
   }
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
+  public void setFirstName(String firstname) {
+    this.firstname = firstname;
   }
 
   public String getFirstName() {
-    return firstName;
+    return firstname;
   }
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
+  public void setLastName(String lastname) {
+    this.lastname = lastname;
   }
 
   public String getLastName() {
-    return lastName;
+    return lastname;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+  // public void setEmail(String email) {
+  // this.email = email;
+  // }
 
-  public String getEmail() {
-    return email;
-  }
-
-  public void setPictureUrl(String url) {
-    this.pictureUrl = url;
-  }
-
-  public String getPictureUrl() {
-    return pictureUrl;
-  }
+  // public String getEmail() {
+  // return email;
+  // }
 
 }

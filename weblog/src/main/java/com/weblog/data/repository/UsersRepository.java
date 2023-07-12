@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 public interface UsersRepository extends JpaRepository<Users, Long> {
 
   @Query("select u from Users u " +
-      "where lower(u.firstName) like lower(concat('%', :searchTerm, '%')) " +
-      "or lower(u.lastName) like lower(concat('%', :searchTerm, '%'))")
+      "where lower(u.firstname) like lower(concat('%', :searchTerm, '%')) " +
+      "or lower(u.lastname) like lower(concat('%', :searchTerm, '%'))")
   List<Users> search(@Param("searchTerm") String searchTerm);
 }
