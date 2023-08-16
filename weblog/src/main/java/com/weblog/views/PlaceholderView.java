@@ -13,7 +13,7 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.weblog.data.models.Users;
-import com.weblog.data.service.CrmService;
+import com.weblog.data.service.UserService;
 
 import jakarta.annotation.security.PermitAll;
 
@@ -25,9 +25,9 @@ public class PlaceholderView extends VerticalLayout {
   TextField filterText = new TextField();
   // UsersForm form;
   @Autowired
-  CrmService service;
+  UserService service;
 
-  public PlaceholderView(CrmService service) {
+  public PlaceholderView(UserService service) {
     this.service = service;
     // changing name later
     addClassName("placeholder-view");
