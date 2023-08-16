@@ -17,7 +17,7 @@ import com.weblog.data.service.CrmService;
 
 import jakarta.annotation.security.PermitAll;
 
-@PageTitle("placeholder")
+@PageTitle("Map")
 @Route(value = "", layout = MainLayout.class)
 @PermitAll
 public class PlaceholderView extends VerticalLayout {
