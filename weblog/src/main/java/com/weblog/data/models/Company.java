@@ -16,21 +16,21 @@ public class Company {
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
 
   @NonNull
-  private String company;
+  private String name;
 
   @NonNull
   private String position;
 
-  public void setCompany(String company) {
-    this.company = company;
+  public void setName(String name) {
+    this.name = name;
   }
 
   public void setPosition(String position) {
     this.position = position;
   }
 
-  public String getCompany() {
-    return company;
+  public String getName() {
+    return name;
   }
 
   public String getPosition() {
