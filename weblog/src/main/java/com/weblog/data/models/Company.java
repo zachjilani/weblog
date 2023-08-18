@@ -16,10 +16,21 @@ public class Company {
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
 
   @NonNull
+  private Long app_id;
+
+  @NonNull
   private String name;
 
   @NonNull
   private String position;
+
+  public void setId(Long id) {
+    this.app_id = id;
+  }
+
+  public Long getId() {
+    return app_id;
+  }
 
   public void setName(String name) {
     this.name = name;
